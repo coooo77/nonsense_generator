@@ -1,0 +1,43 @@
+<div class="row bg-light">
+  <div class="col-12 col-lg-10 col-xl-8 mx-auto p-5">
+    <h2 class="card-title text-center m-5">
+      你想對誰說幹話
+    </h2>
+    <form action="/" method="post">
+      <div class="card-deck mb-4">
+        <div class="card border border-light bg-light">
+          <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg"
+            class="card-img-top img-thumbnail" alt="..." style="object-fit: cover; width:100%; height:80%">
+          <div class="card-body text-center">
+            <input type="radio" name="target" value="engineer" {{#if career.engineer}} checked {{/if}}>
+            <span>工程師</span>
+          </div>
+        </div>
+        <div class="card border border-light bg-light">
+          <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg"
+            class="card-img-top img-thumbnail" alt="..." style="object-fit: cover; width:100%; height:80%">
+          <div class="card-body text-center ">
+            <input type="radio" name="target" value="designer" {{#if career.designer}} checked {{/if}}>
+            <span>設計師</span>
+          </div>
+        </div>
+        <div class="card border border-light bg-light">
+          <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg"
+            class="card-img-top img-thumbnail" alt="..." style="object-fit: cover; width:100%; height:80%">
+          <div class="card-body text-center">
+            <input type="radio" name="target" value="entrepreneur" {{#if career.entrepreneur}} checked {{/if}}>
+            <span>創業家</span>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-secondary col-10 col-lg-1 col-xl-1 mx-auto" style="height:80%"
+          type="submit">產生幹話</button>
+        <textarea class="form-control col-12 col-lg-9 col-xl-10" rows="5" id="comment">{{#if word}} {{word}}
+        {{/if}}</textarea>
+      </div>
+    </form>
+  </div>
+</div>
+
+{{!-- {{#if career === 'entrepreneur'}} checked {{/if}}可以這樣寫嗎? --}}
